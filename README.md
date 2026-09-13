@@ -1,34 +1,90 @@
 # Análise Exploratória de Dados — Stroke Prediction
 
-**Por:** Carolina Amorim e Lara Abduni
+Projeto de análise exploratória de dados para estimar fatores associados à ocorrência de acidente vascular cerebral (`stroke`) a partir de um conjunto público de registros clínico-demográficos.
 
-Análise exploratória de dados (EDA) sobre um conjunto de registros de pacientes, com o objetivo de entender quais características se associam à ocorrência de AVC (*stroke*) e preparar os dados para as fases de modelagem subsequentes.
+## Autoria
 
-A variável-alvo é `stroke`: `0` indica que a pessoa não teve AVC e `1` indica que teve. O dataset é fortemente desbalanceado (apenas 4,87% dos registros são casos positivos), o que orienta várias das decisões de análise e pré-processamento.
+- Carolina Amorim
+- Lara Abduni
+
+## Visão Geral
+
+A análise aborda o dataset do Kaggle `Stroke Prediction Dataset`, com foco em:
+
+- perfil dos pacientes;
+- distribuição da variável alvo;
+- correlação entre atributos e ocorrência de AVC;
+- tratamento de dados faltantes e outliers;
+- preparação dos dados para modelagem.
+
+## Objetivo
+
+Compreender quais variáveis se associam à presença de AVC e construir uma base sólida para futuras etapas de modelagem preditiva.
 
 ## Dataset
 
-[Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) (Kaggle) — 5.110 registros e 11 features preditoras, incluindo idade, nível médio de glicose, IMC, hipertensão, doença cardíaca, tipo de trabalho e histórico de tabagismo. O download é feito automaticamente pelo notebook via `kagglehub`.
+Fonte: [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
 
-## Estrutura da análise
+- Registros: 5.110
+- Variáveis preditivas: 11
+- Variável alvo: `stroke`
+- Classe positiva: aproximadamente 4,87%
 
-1. **Carregamento e inspeção inicial** — features, dimensões, tipos, valores ausentes, desbalanceamento do alvo e separação treino/teste.
-2. **Análise univariada** — estatísticas descritivas e distribuições das variáveis numéricas e categóricas.
-3. **Análise bivariada e multivariada** — correlações, relação das categóricas com o alvo e boxplots de numéricas por categóricas.
-4. **Pré-processamento** — tratamento de ausentes e outliers, encoding, padronização, PCA e um pipeline reprodutível (`Pipeline` + `ColumnTransformer`).
-5. **Achados, limitações e conclusão.**
+## Estrutura do projeto
 
-## Principais achados
+```text
+StrokePrediction-EDA/
+├── docs/
+├── healthcare-dataset-stroke-data.csv
+├── StrokePrediction.ipynb
+├── mkdocs.yml
+├── requirements.txt
+└── requirements-docs.txt
+```
 
-- Idade é a variável numérica mais associada ao AVC (correlação ≈ 0,25); casos positivos têm idade média bem mais alta.
-- Hipertensão eleva de forma marcante a taxa de AVC (13,25% contra 3,97%).
-- As classes não são linearmente separáveis: o PCA no espaço completo mostra forte sobreposição, indicando a necessidade de modelos não-lineares e de tratamento do desbalanceamento na modelagem.
+## Análise em Destaque
 
-## Tecnologias utilizadas
+A investigação do notebook inclui:
 
-Python, com Pandas, NumPy, Matplotlib, Seaborn e Scikit-learn.
+1. Carregamento e inspeção inicial dos dados.
+2. Estatísticas descritivas e visualizações univariadas.
+3. Correlações e relações entre variáveis categóricas e numéricas.
+4. Tratamento de dados e preparação para modelagem.
+5. Conclusões e limitações observadas no estudo.
 
-## Como executar
+## Principais Achados
 
-1. Instale as dependências: `pip install pandas numpy matplotlib seaborn scikit-learn kagglehub`
-2. Abra `StrokePrediction.ipynb` e execute todas as células (Restart & Run All).
+- Idade apresenta associação mais forte com a ocorrência de AVC.
+- Hipertensão apresenta maior taxa de eventos em relação ao grupo sem hipertensão.
+- O conjunto é altamente desbalanceado, o que exige medidas especiais para avaliação e modelagem.
+
+## Tecnologias
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- KaggleHub
+
+## Requisitos de Execução
+
+```bash
+pip install -r requirements.txt
+```
+
+## Executar o Notebook
+
+Abra o notebook `StrokePrediction.ipynb` e execute todas as células com o fluxo **Restart & Run All**.
+
+## Documentação
+
+A documentação está organizada em Markdown e pode ser servida localmente com MkDocs:
+
+```bash
+pip install -r requirements-docs.txt
+mkdocs serve
+```
+
+A documentação deste projeto pode ser entregue como site público com GitHub Pages.
