@@ -13,3 +13,13 @@
 - [Seaborn](https://seaborn.pydata.org/)
 - [Scikit-learn](https://scikit-learn.org/)
 - [MkDocs](https://www.mkdocs.org/)
+- [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
+
+## Conceitos Usados na Análise
+
+- Análise exploratória de dados
+- Classificação binária
+- Desbalanceamento de classes
+- Tratamento de dados ausentes
+- Separação entre treino e teste
+- Métricas de avaliação para classificação

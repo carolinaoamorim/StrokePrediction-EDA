@@ -1,10 +1,13 @@
 # Arquitetura do Projeto
 
-## Estrutura
+## Estrutura de Diretórios
 
 ```text
 StrokePrediction-EDA/
 ├── docs/
+│   ├── assets/
+│   │   └── stylesheets/
+│   │       └── extra.css
 │   ├── index.md
 │   ├── dataset.md
 │   ├── analysis.md
@@ -15,6 +18,7 @@ StrokePrediction-EDA/
 ├── StrokePrediction.ipynb
 ├── mkdocs.yml
 ├── README.md
+├── requirements.txt
 └── requirements-docs.txt
 ```
 
@@ -24,3 +28,35 @@ StrokePrediction-EDA/
 - `healthcare-dataset-stroke-data.csv`: arquivo do dataset.
 - `docs/`: documentação estática em Markdown.
 - `mkdocs.yml`: configuração do site MkDocs.
+- `docs/assets/stylesheets/extra.css`: ajustes visuais específicos da documentação.
+- `requirements.txt`: dependências necessárias para executar a análise.
+- `requirements-docs.txt`: dependências necessárias para gerar e publicar a documentação.
+
+## Organização da Documentação
+
+| Página | Papel na entrega |
+|---|---|
+| `index.md` | Apresentação executiva do projeto e principais achados. |
+| `dataset.md` | Fonte, dicionário de dados e pontos de atenção do dataset. |
+| `analysis.md` | Resultados da EDA, tabelas-resumo, interpretações e limitações. |
+| `setup.md` | Instruções de ambiente, execução local e publicação. |
+| `project-structure.md` | Estrutura do repositório e função de cada arquivo. |
+| `references.md` | Fontes e bibliotecas utilizadas. |
+
+## Fluxo de Trabalho
+
+```mermaid
+flowchart TD
+    A[Dataset CSV] --> B[Notebook de EDA]
+    B --> C[Resultados e interpretações]
+    C --> D[Documentação MkDocs]
+    D --> E[Build local]
+    E --> F[GitHub Pages]
+```
+
+## Boas Práticas Aplicadas
+
+- Separação entre análise (`StrokePrediction.ipynb`) e documentação (`docs/`).
+- Configuração declarativa do site em `mkdocs.yml`.
+- Dependências de análise e documentação em arquivos separados.
+- Estrutura preparada para publicação aberta via GitHub Pages.

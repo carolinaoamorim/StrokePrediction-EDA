@@ -1,6 +1,12 @@
 # Análise Exploratória de Dados — Stroke Prediction
 
-Projeto de análise exploratória de dados para estimar fatores associados à ocorrência de acidente vascular cerebral (`stroke`) a partir de um conjunto público de registros clínico-demográficos.
+Projeto de análise exploratória de dados para identificar fatores associados à ocorrência de acidente vascular cerebral (`stroke`) a partir de um conjunto público de registros clínico-demográficos.
+
+## Documentação
+
+A documentação do projeto foi organizada com MkDocs Material e está preparada para publicação aberta via GitHub Pages:
+
+[Acessar documentação](https://carolinaoamorim.github.io/StrokePrediction-EDA/)
 
 ## Autoria
 
@@ -9,17 +15,13 @@ Projeto de análise exploratória de dados para estimar fatores associados à oc
 
 ## Visão Geral
 
-A análise aborda o dataset do Kaggle `Stroke Prediction Dataset`, com foco em:
+A análise aborda o dataset do Kaggle **Stroke Prediction Dataset**, com foco em:
 
 - perfil dos pacientes;
-- distribuição da variável alvo;
-- correlação entre atributos e ocorrência de AVC;
-- tratamento de dados faltantes e outliers;
-- preparação dos dados para modelagem.
-
-## Objetivo
-
-Compreender quais variáveis se associam à presença de AVC e construir uma base sólida para futuras etapas de modelagem preditiva.
+- distribuição da variável-alvo;
+- qualidade dos dados e valores ausentes;
+- relações entre atributos clínicos, demográficos e ocorrência de AVC;
+- preparação da base para futuras etapas de modelagem.
 
 ## Dataset
 
@@ -27,10 +29,17 @@ Fonte: [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/s
 
 - Registros: 5.110
 - Variáveis preditivas: 11
-- Variável alvo: `stroke`
-- Classe positiva: aproximadamente 4,87%
+- Variável-alvo: `stroke`
+- Classe positiva: 249 casos, aproximadamente 4,87% da base
 
-## Estrutura do projeto
+## Principais Achados
+
+- Idade apresenta associação relevante com a ocorrência de AVC.
+- Hipertensão e doença cardíaca aparecem associadas a taxas observadas mais altas de AVC.
+- O conjunto é altamente desbalanceado, o que exige cuidado na avaliação de modelos.
+- A variável `bmi` possui valores ausentes e deve ser tratada antes da modelagem.
+
+## Estrutura do Projeto
 
 ```text
 StrokePrediction-EDA/
@@ -42,49 +51,33 @@ StrokePrediction-EDA/
 └── requirements-docs.txt
 ```
 
-## Análise em Destaque
+## Executar a Análise
 
-A investigação do notebook inclui:
-
-1. Carregamento e inspeção inicial dos dados.
-2. Estatísticas descritivas e visualizações univariadas.
-3. Correlações e relações entre variáveis categóricas e numéricas.
-4. Tratamento de dados e preparação para modelagem.
-5. Conclusões e limitações observadas no estudo.
-
-## Principais Achados
-
-- Idade apresenta associação mais forte com a ocorrência de AVC.
-- Hipertensão apresenta maior taxa de eventos em relação ao grupo sem hipertensão.
-- O conjunto é altamente desbalanceado, o que exige medidas especiais para avaliação e modelagem.
-
-## Tecnologias
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- KaggleHub
-
-## Requisitos de Execução
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Executar o Notebook
+Abra o notebook `StrokePrediction.ipynb` e execute todas as células com **Restart & Run All**.
 
-Abra o notebook `StrokePrediction.ipynb` e execute todas as células com o fluxo **Restart & Run All**.
-
-## Documentação
-
-A documentação está organizada em Markdown e pode ser servida localmente com MkDocs:
+## Rodar a Documentação Localmente
 
 ```bash
 pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
-A documentação deste projeto pode ser entregue como site público com GitHub Pages.
+## Validar e Publicar
+
+Valide o build:
+
+```bash
+mkdocs build --strict
+```
+
+Publique no GitHub Pages:
+
+```bash
+mkdocs gh-deploy
+```
