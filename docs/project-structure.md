@@ -6,6 +6,7 @@
 StrokePrediction-EDA/
 ├── docs/
 │   ├── assets/
+│   │   ├── images/
 │   │   └── stylesheets/
 │   │       └── extra.css
 │   ├── index.md
@@ -18,6 +19,8 @@ StrokePrediction-EDA/
 ├── StrokePrediction.ipynb
 ├── mkdocs.yml
 ├── README.md
+├── scripts/
+│   └── generate_docs_figures.py
 ├── requirements.txt
 └── requirements-docs.txt
 ```
@@ -27,8 +30,10 @@ StrokePrediction-EDA/
 - `StrokePrediction.ipynb`: notebook principal com análise exploratória.
 - `healthcare-dataset-stroke-data.csv`: arquivo do dataset.
 - `docs/`: documentação estática em Markdown.
+- `docs/assets/images/`: gráficos exportados para enriquecer a documentação.
 - `mkdocs.yml`: configuração do site MkDocs.
 - `docs/assets/stylesheets/extra.css`: ajustes visuais específicos da documentação.
+- `scripts/generate_docs_figures.py`: script que gera os gráficos usados na página de análise.
 - `requirements.txt`: dependências necessárias para executar a análise.
 - `requirements-docs.txt`: dependências necessárias para gerar e publicar a documentação.
 

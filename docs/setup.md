@@ -63,6 +63,16 @@ mkdocs serve
 
 Abra o endereço exibido no terminal, normalmente `http://127.0.0.1:8000/`.
 
+## Regenerando os Gráficos
+
+Os gráficos da página de análise são gerados a partir do CSV original:
+
+```bash
+python scripts/generate_docs_figures.py
+```
+
+Depois de regenerar as imagens, rode novamente o build da documentação para conferir se tudo continua funcionando.
+
 ## Build de Verificação
 
 ```bash

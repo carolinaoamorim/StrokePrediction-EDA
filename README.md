@@ -68,6 +68,12 @@ pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
+Os gráficos da documentação podem ser recriados com:
+
+```bash
+python scripts/generate_docs_figures.py
+```
+
 ## Validar e Publicar
 
 Valide o build:
