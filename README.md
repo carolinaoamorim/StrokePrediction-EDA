@@ -8,7 +8,7 @@ A variável-alvo é `stroke`: `0` indica que a pessoa não teve AVC e `1` indica
 
 ## Dataset
 
-[Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) (Kaggle) — 5.110 registros e 11 features preditoras, incluindo idade, nível médio de glicose, IMC, hipertensão, doença cardíaca, tipo de trabalho e histórico de tabagismo. O download é feito automaticamente pelo notebook via `kagglehub`.
+[Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) (Kaggle) — 5.110 registros e 10 features preditoras, incluindo idade, nível médio de glicose, IMC, hipertensão, doença cardíaca, tipo de trabalho e histórico de tabagismo. O download é feito automaticamente pelo notebook via `kagglehub`.
 
 ## Documentação
 
