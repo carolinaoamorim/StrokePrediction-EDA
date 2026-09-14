@@ -589,6 +589,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#regenerando-os-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regenerando os Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-de-verificacao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -756,6 +767,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#regenerando-os-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regenerando os Gráficos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-de-verificacao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -854,12 +876,17 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdocs<span class="w"> </span>serve
 </span></code></pre></div>
 <p>Abra o endereço exibido no terminal, normalmente <code>http://127.0.0.1:8000/</code>.</p>
+<h2 id="regenerando-os-graficos">Regenerando os Gráficos<a class="headerlink" href="#regenerando-os-graficos" title="Permanent link">&para;</a></h2>
+<p>Os gráficos da página de análise são gerados a partir do CSV original:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>scripts/generate_docs_figures.py
+</span></code></pre></div>
+<p>Depois de regenerar as imagens, rode novamente o build da documentação para conferir se tudo continua funcionando.</p>
 <h2 id="build-de-verificacao">Build de Verificação<a class="headerlink" href="#build-de-verificacao" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
 </span></code></pre></div>
 <p>O modo <code>--strict</code> ajuda a encontrar links quebrados, páginas ausentes e problemas que poderiam prejudicar a publicação.</p>
 <h2 id="publicacao-no-github-pages">Publicação no GitHub Pages<a class="headerlink" href="#publicacao-no-github-pages" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs<span class="w"> </span>gh-deploy
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdocs<span class="w"> </span>gh-deploy
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Entrega com conceito +</p>
