@@ -91,30 +91,6 @@ Como a classe positiva é rara, acurácia isolada pode mascarar modelos ruins pa
 </div>
 </div>
 
-## Critérios de Entrega
-
-<div class="checklist" markdown>
-<div markdown>
-**Documentação aberta**<br>
-Site MkDocs pronto para publicação em GitHub Pages.
-</div>
-
-<div markdown>
-**Reprodutibilidade**<br>
-Instruções de ambiente, dependências e execução do notebook.
-</div>
-
-<div markdown>
-**Clareza analítica**<br>
-Dataset, hipóteses, limitações e achados documentados em páginas separadas.
-</div>
-
-<div markdown>
-**Acabamento profissional**<br>
-Tema Material, busca, navegação organizada, cards, tabelas e diagrama de pipeline.
-</div>
-</div>
-
 ## Autoria
 
 **Carolina Amorim** e **Lara Abduni**<br>
